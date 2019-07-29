@@ -1330,7 +1330,7 @@ var I18N = {},
                         $('#screen').removeClass('percentage-mode');
                         event.preventDefault();
                     }
-                    else if(event.which == 38) {
+                    else if(event.shiftKey && event.which == 38) {
                         if (self.artboardIndex === 0) return;
 
                         self.maxSize = undefined;
@@ -1348,7 +1348,7 @@ var I18N = {},
                             artboard: self.artboardIndex
                         });
                     }
-                    else if(event.which == 40) {
+                    else if(event.shiftKey && event.which == 40) {
                         var count = $('li.artboard').length;
                         var nextArtboardIndex = self.artboardIndex + 1;
                         if (nextArtboardIndex >= count) return;
